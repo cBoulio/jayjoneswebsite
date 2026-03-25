@@ -735,6 +735,10 @@ select {
     text-align: center;
   }
 
+  .logo-img {
+    display: none;
+  }
+
   .hero {
     min-height: auto;
     background-position: center top;
