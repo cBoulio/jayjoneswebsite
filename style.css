@@ -55,6 +55,10 @@ a { color: inherit; text-decoration: none; }
   padding: 0 24px;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-flex;
@@ -156,6 +160,13 @@ a { color: inherit; text-decoration: none; }
   border-radius: 6px;
 }
 
+.logo-text-mobile {
+  display: none;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -212,7 +223,8 @@ a { color: inherit; text-decoration: none; }
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 120px 0 80px;
+  padding-top: 120px;
+  padding-bottom: 80px;
   max-width: 720px;
 }
 
@@ -721,13 +733,13 @@ select {
     flex-direction: column;
     padding: 24px;
     gap: 16px;
-    transform: translateY(-110%);
-    transition: transform 0.3s ease;
+    display: none;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 999;
   }
 
   .nav-links.open {
-    transform: translateY(0);
+    display: flex;
   }
 
   .nav-links .btn-nav {
@@ -739,13 +751,22 @@ select {
     display: none;
   }
 
+  .logo-text-mobile {
+    display: block;
+  }
+
   .hero {
     min-height: auto;
     background-position: center top;
   }
 
+  .container {
+    padding: 0 28px;
+  }
+
   .hero-content {
-    padding: 110px 0 60px;
+    padding-top: 110px;
+    padding-bottom: 60px;
   }
 
   .hero h1 {
@@ -758,9 +779,7 @@ select {
 
   .hero-actions {
     flex-direction: column;
-  }
-
-  .hero-actions .btn {
+    align-items: stretch;
     width: 100%;
   }
 
@@ -822,10 +841,12 @@ select {
 
   .cta-actions {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .cta-actions .btn { width: 100%; max-width: 320px; }
+  .cta-actions .btn { width: 100%; }
 
   .areas-grid {
     gap: 8px;
@@ -839,7 +860,8 @@ select {
 
 @media (max-width: 480px) {
   .hero-content {
-    padding: 100px 0 48px;
+    padding-top: 100px;
+    padding-bottom: 48px;
   }
 
   .hero h1 {
