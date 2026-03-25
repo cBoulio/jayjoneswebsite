@@ -148,36 +148,12 @@ a { color: inherit; text-decoration: none; }
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-.logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--blue);
-  color: var(--white);
-  font-weight: 800;
-  font-size: 0.9rem;
-  border-radius: 10px;
-  letter-spacing: -0.5px;
-}
-
-.logo-text {
-  color: var(--white);
-  font-weight: 700;
-  font-size: 1.1rem;
-  line-height: 1.2;
-}
-
-.logo-sub {
-  display: block;
-  font-weight: 400;
-  font-size: 0.7rem;
-  color: var(--gray-400);
-  letter-spacing: 0.02em;
+.logo-img {
+  height: 56px;
+  width: auto;
+  border-radius: 6px;
 }
 
 .nav-links {
@@ -698,18 +674,12 @@ select {
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-.footer-brand .logo-icon {
-  width: 32px;
-  height: 32px;
-  font-size: 0.75rem;
-  border-radius: 8px;
-}
-
-.footer-brand .logo-text {
-  font-size: 0.95rem;
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  border-radius: 6px;
 }
 
 .footer-copy {
